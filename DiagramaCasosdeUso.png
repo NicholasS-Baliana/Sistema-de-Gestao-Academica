@@ -1,0 +1,51 @@
+
+ Sistema de Gestão Acadêmica (SGA)
+
+Este projeto representa um sistema para gerenciar alunos, professores e administradores em um ambiente acadêmico.
+
+---
+
+ Diagrama de Casos de Uso
+
+O diagrama abaixo descreve as interações dos atores (Aluno, Professor e Administrador) com o sistema:
+                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                     
+  title Casos de Uso - Sistema de Gestão Acadêmica 
+
+actor "Aluno" as Aluno
+actor "Professor" as Professor
+actor "Administrador" as Admin
+
+rectangle "Sistema de Gestão Acadêmica (SGA)" {
+  usecase "Realizar Login" as UC1
+  usecase "Consultar Notas e Faltas" as UC2
+  usecase "Inscrever-se em Disciplinas" as UC3
+  usecase "Acessar Material de Aula" as UC4
+
+  usecase "Lançar Notas" as UC5
+  usecase "Registrar Frequência" as UC6
+  usecase "Publicar Material de Aula" as UC7
+
+  usecase "Gerenciar Alunos" as UC8
+  usecase "Gerenciar Professores" as UC9
+  usecase "Gerenciar Cursos e Disciplinas" as UC10
+  usecase "Gerar Relatórios" as UC11
+}
+
+Aluno -- UC1
+Aluno -- UC2
+Aluno -- UC3
+Aluno -- UC4
+
+Professor -- UC1
+Professor -- UC5
+Professor -- UC6
+Professor -- UC7
+
+Admin -- UC1
+Admin -- UC8
+Admin -- UC9
+Admin -- UC10
+Admin -- UC11
+
+@enduml 
